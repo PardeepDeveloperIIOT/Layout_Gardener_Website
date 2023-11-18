@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lobster&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+}
+
+:root {
+    --nav-color: #0F4229;
+    --btn-color: #348E38;
+    --text-white: white;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/*-------------------- Nav-1 ------------------*/
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav-color);
+    color: var(--text-white);
+    padding: 10px 40px 0px 40px;
+}
+
+.nav-1 .nav-1-contact i,
+p {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.nav-1 .nav-1-contact i {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.nav-1 .nav-1-contact p {
+    margin-right: 25px;
+}
+
+.nav-1-icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-1-icons ul li i {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.nav-1-icons ul li i:hover {
+    color: red;
+    border: 1px solid rgb(3, 251, 3);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/*-------------------- Nav-2 ------------------*/
+.nav-2-toggle {
+    display: none;
+}
+
+.nav-2 .toggle-menu {
+    display: none;
+}
+
+.nav-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 40px;
+    text-align: center;
+    z-index: 5;
+}
+
+.nav-2 .nav-2-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-2 .nav-2-logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.nav-2 .nav-2-icons ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-2 .nav-2-icons ul li {
+    padding: 20px 0px 20px 0px;
+}
+
+.nav-2 .nav-2-icons ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.nav-2 .nav-2-icons ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background-color: red;
+    height: 3px;
+    bottom: 0;
+    transition: all 0.5s linear;
+}
+
+.nav-2 .nav-2-icons ul li a:hover::before {
+    width: 100%;
+}
+
+.nav-2 .nav-2-icons ul li a:hover {
+    color: red;
+}
+
+.nav-2 .nav-2-icons ul select {
+    border: none;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.nav-2 .nav-2-icons ul select:hover {
+    color: red;
+}
+
+.nav-2 .nav-2-icons ul .btn-get-quote {
+    background-color: var(--btn-color);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-2 .nav-2-icons ul .btn-get-quote i {
+    margin-left: 10px;
+}
+
+/*-----------------Header back img------------*/
+header {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    position: relative;
+}
+
+header .header-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+header .header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(13, 84, 48);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+header .header-section .header-back-img {
+    transform: translateZ(-70px) scale(8.1);
+    background-image: url(../images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+header .header-section .header-back-text {
+    transform: translateZ(-50px) scale(5);
+    position: absolute;
+    color: var(--nav-color);
+    text-align: center;
+}
+
+header .header-section .header-back-text h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+header .header-section .header-back-text .btn-explore {
+    font-size: 1.5rem;
+    background-color: var(--btn-color);
+    width: 25%;
+    padding: 18px 10px 18px 10px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+header .header-section .header-back-text .btn-explore:hover {
+    scale: 1.1;
+    color: rgb(239, 125, 125)
+}
+
+/*--------------------three box ad----------------*/
+.three-box-ad {
+    max-width: 1200px;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -230px;
+}
+
+.three-box-ad .ad-1 {
+    box-shadow: 0px 0px 20px gray;
+    flex-basis: 32%;
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+    margin-bottom: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.three-box-ad .ad-1:hover {
+    box-shadow: 0px 0px 20px rgb(246, 4, 4);
+    scale: 1.1;
+
+}
+
+.three-box-ad .ad-1 i {
+    background-color: rgb(192, 189, 189);
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: var(--btn-color);
+}
+
+.three-box-ad .ad-1 h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/*-------------------Year Section---------------*/
+.year-experience {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.year-experience .year-experience-img img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s linear;
+    border-top: 20px solid red;
+    border-radius: 20px;
+}
+
+.year-experience .year-experience-img img:hover {
+    scale: 1.09;
+    border-radius: 20px;
+    border-top: 20px solid var(--btn-color)
+}
+
+.year-experience .year-experience-content h1 {
+    color: var(--btn-color);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.year-experience .year-experience-content p {
+    color: var(--btn-color);
+}
+
+.year-experience .year-experience-content h3 {
+    color: var(--nav-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.btn-year {
+    font-size: 1rem;
+    background-color: var(--btn-color);
+    width: 30%;
+    padding: 18px 10px 18px 10px;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.btn-year:hover {
+    color: red;
+    border-top-right-radius: 0px;
+}
+
+.year-experience .year-experience-img {
+    flex-basis: 25%;
+}
+
+.year-experience .year-experience-content {
+    flex-basis: 45%;
+}
+
+.year-experience .year-experience-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 25%;
+}
+
+.year-experience .year-experience-info i {
+    font-size: 2.5rem;
+    color: var(--btn-color);
+    margin-bottom: 10px;
+}
+
+.year-experience .year-experience-info .year-experience-info-1 {
+    border-left: 2px solid rgb(219, 216, 216);
+    padding-left: 10px;
+}
+
+/*--------------------- Clinet value -----------------*/
+.client-value {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    background-image: url(../images/back1.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    height: 250px;
+    position: relative;
+}
+
+.client-value::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(13, 84, 48);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.client-value .client-1 {
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.client-value .client-1 h1 {
+    font-weight: 700;
+}
+
+/*----------------------Why Chossing Us---------------*/
+.chossing-us {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px 20px 50px 20px;
+}
+
+.chossing-us .chossing-us-text h5 {
+    color: var(--btn-color);
+    margin-bottom: 20px;
+}
+
+.chossing-us .chossing-us-text h3 {
+    color: var(--nav-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+
+}
+
+.chossing-us .chossing-us-text .btn-chossing {
+    font-size: 1rem;
+    background-color: var(--btn-color);
+    width: 25%;
+    padding: 18px 10px 18px 10px;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.chossing-us .chossing-us-text .btn-chossing:hover {
+    color: red;
+    border-top-right-radius: 0px;
+}
+
+.chossing-us .chossing-us-text {
+    width: 55%;
+}
+
+.chossing-us .chossing-us-icon-left {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chossing-us .chossing-us-icon-left .chossing-us-box-1 {
+    text-align: center;
+    padding: 60px 0px;
+    box-shadow: 0px 0px 20px rgb(173, 171, 171);
+    border-radius: 10px;
+    transition: all 0.9s ease-in-out;
+    cursor: pointer;
+}
+
+.chossing-us .chossing-us-icon-left .chossing-us-box-1:hover {
+    background-color: var(--btn-color);
+}
+
+.chossing-us .chossing-us-icon-left .chossing-us-box-1 i {
+    font-size: 2rem;
+    background-color: rgb(222, 222, 222);
+    padding: 15px 15px;
+    border-radius: 50%;
+    color: var(--btn-color);
+}
+
+/*--------------------------Footer---------------------*/
+footer {
+    background-color: var(--nav-color);
+    color: rgb(188, 184, 184);
+    padding: 50px 0px 50px 0px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    padding: 0px 10px 0px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.footer-container p {
+    margin-bottom: 5px;
+}
+
+.our-office,
+.services,
+.quick-Links,
+.newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container .our-office .our-office-icon i {
+    margin-right: 10px;
+}
+
+.footer-container .our-office .small-icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-container .our-office .small-icon li {
+    list-style: none;
+    text-align: center;
+    border: 1px solid rgb(140, 139, 139);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-container .our-office .small-icon li:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer-container .newsletter input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid var(--nav-color);
+    box-shadow: 0px 0px 10px var(--btn-color);
+    width: 100%;
+}
+
+.footer-container .newsletter .search {
+    position: relative;
+    text-align: center;
+}
+
+.footer-container .newsletter button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 30%;
+    height: 45px;
+    background-color: var(--btn-color);
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+/*-----------------------footer-end--------------------*/
+.footer-end {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-end .footer-end-section {
+    max-width: 1200px;
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer-end .footer-end-section p {
+    margin: 0;
+}
+
+/*-----------------------------------Responsive------------------------*/
+/*----------------Responsive: 938px-----------------*/
+
+@media (max-width: 938px) {
+    .nav-2-toggle {
+        display: none;
+    }
+
+    .nav-2-toggle ul {
+        list-style: none;
+    }
+
+    .nav-2-toggle ul li {
+        margin-top: 20px;
+    }
+
+    .nav-2-toggle ul select {
+        margin-top: 20px;
+        border: none;
+        font-size: 1.1rem;
+    }
+
+    .nav-2-toggle ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.1rem;
+    }
+
+    .nav-1 {
+        height: 10px;
+    }
+
+    .nav-1 .nav-1-icons {
+        display: none;
+    }
+
+    .nav-2 .nav-2-icons {
+        display: none;
+    }
+
+    .nav-2 .toggle-menu {
+        display: block;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .three-box-ad {
+        justify-content: center;
+    }
+
+    .three-box-ad .ad-1 {
+        flex-basis: 80%;
+    }
+
+    .year-experience .year-experience-img {
+        flex-basis: 35%;
+    }
+
+    .year-experience .year-experience-content {
+        flex-basis: 60%;
+    }
+
+    .year-experience .year-experience-info {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        margin-top: 50px;
+    }
+
+    .client-value {
+        gap: 10px;
+    }
+
+    .client-value .client-1 {
+        flex-basis: 40%;
+    }
+
+    .chossing-us {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .chossing-us .chossing-us-text {
+        flex-basis: 90%;
+    }
+
+    .chossing-us .chossing-us-icon-left {
+        width: 40%;
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+
+    .footer-container .our-office .small-icon {
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .our-office,
+    .services,
+    .quick-Links,
+    .newsletter {
+        flex-basis: 40%;
+    }
+
+    .footer-end .footer-end-section {
+        margin: 0px 50px;
+    }
+
+    header .header-section .header-back-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+}
+
+/*----------------Responsive: 704px-----------------*/
+
+@media (max-width: 704px) {
+    .year-experience {
+        justify-content: center;
+    }
+
+    .year-experience .year-experience-info {
+        flex-basis: 80%;
+    }
+
+    .year-experience .year-experience-img {
+        flex-basis: 80%;
+        margin: 0 auto;
+    }
+
+    .year-experience .year-experience-content {
+        flex-basis: 80%;
+    }
+
+    .chossing-us {
+        justify-content: center;
+        /* gap: 30px; */
+    }
+
+    .chossing-us .chossing-us-text {
+        flex-basis: 90%;
+    }
+
+    .chossing-us .chossing-us-icon-left {
+        width: 90%;
+    }
+
+    .footer-container .our-office .small-icon {
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .our-office,
+    .services,
+    .quick-Links,
+    .newsletter {
+        flex-basis: 90%;
+        text-align: left;
+    }
+
+    .footer-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: white;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .footer-end .footer-end-section {
+        justify-content: center;
+    }
+
+    .footer-end .footer-end-section p {
+        margin-bottom: 10px;
+    }
+
+    header .header-section .header-back-text .btn-explore {
+        width: 40%;
+    }
+
+    header .header-section .header-back-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+}
+
+/*----------------Responsive: 500px-----------------*/
+
+@media (max-width: 500px) {
+    * {
+        font-size: 14px;
+    }
+
+    .three-box-ad .ad-1 {
+        flex-basis: 100%;
+    }
+
+    .year-experience .year-experience-info {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+
+    .year-experience .year-experience-img {
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+
+    .year-experience .year-experience-content {
+        flex-basis: 100%;
+    }
+
+    .client-value {
+        height: 450px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-position: center right;
+        background-size: cover;
+    }
+
+    .client-value {
+        gap: 30px;
+    }
+
+    .client-value .client-1 {
+        flex-basis: 50%;
+    }
+
+    .chossing-us .chossing-us-text .btn-chossing {
+        width: 35%;
+    }
+
+    .chossing-us .chossing-us-text {
+        flex-basis: 100%;
+    }
+
+    .chossing-us .chossing-us-icon-left {
+        width: 100%;
+    }
+
+    .footer-container .newsletter button {
+        top: 6px;
+    }
+
+    header .header-section .header-back-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+}
+
+/*----------------Responsive: 377px-----------------*/
+@media (max-width: 377px) {
+    .chossing-us .chossing-us-text .btn-chossing {
+        width: 50%;
+    }
+
+    header .header-section .header-back-text .btn-explore {
+        width: 50%;
+    }
+
+    .year-experience .year-experience-content .btn-year {
+        width: 50%;
+    }
+}
